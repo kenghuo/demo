@@ -1,6 +1,7 @@
+importScripts('func.js');
+
 onmessage = (event) => {
     console.log(event);
     
-    postMessage(event.data.title + ' ' + event.data.name);
+    postMessage(add(event.data.title + ' ' + event.data.name));
 }
-
