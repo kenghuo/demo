@@ -11,7 +11,7 @@ $ gulp
 `gulp` 报错 
 
 ``` 全局报错
-/c/Users/Administrator/AppData/Roaming/npm/gulp: No such file or directory
+ No such file or directory
 ```
 
 需要全局安装 gulp
