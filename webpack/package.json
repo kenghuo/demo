@@ -5,6 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
     "style-loader": "^0.22.1",
     "webpack-cli": "^3.1.0"
   },
@@ -13,7 +16,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --config webpack.config.js --mode development --watch --progerss",
+    "start": "webpack --config webpack.config.js --mode development --watch",
     "build": "webpack --config webpack.config.js --mode production"
   },
   "keywords": [],
