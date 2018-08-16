@@ -16,18 +16,10 @@ module.exports = {
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            minimize: true,
-                            sourceMap: true,
-                            importLoader: 2
-                        }
+                        options: {}
                     },{
                         loader: 'css-loader',
-                        options: {
-                            minimize: true,
-                            sourceMap: true,
-                            importLoader: 2
-                        }
+                        options: {}
                     }
                 ]
                 
