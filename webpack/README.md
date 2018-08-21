@@ -7,7 +7,7 @@ $ npm install
 ```
 
 ```开始打包
-npm run start
+$ npm run start
 ```
 
 生成 dist 目录
