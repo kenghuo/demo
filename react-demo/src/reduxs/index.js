@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import demo from './demo.js';
+import title from './title.js';
 
 export default combineReducers({
-    demo
+    title
 });

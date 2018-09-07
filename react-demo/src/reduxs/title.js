@@ -1,7 +1,9 @@
 
 // init state
 const initialState = {
-    title: '测试标题'
+    title: {
+        message: '测试标题'
+    }
 };
 
 const TITLE = 'demo/change_title';
@@ -21,7 +23,7 @@ export default (state: Object = initialState, action: Action) => {
 
         case TITLE:
             return { ...state,
-                title: action.title
+                title: Object.assign({}, state.title, action.title)
             };
 
         default:
