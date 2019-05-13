@@ -1,4 +1,4 @@
 import Div from './module';
-import './main.css';
+import './main';
 
 document.getElementById('app').appendChild(Div());

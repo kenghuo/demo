@@ -36,5 +36,27 @@ module.exports = {
             filename: "[name].css",
         }),
         new Uglify()
-    ]
+    ],
+    resolve: {
+        extensions: ['.js', '.json', 'jsx']       // 文件导入这些后缀可以不用写
+    },
+    stats: {
+        all: false,
+        modules: false,
+        maxModules: 0,
+        errors: true,
+        warnings: true,
+        // our additional options
+        moduleTrace: true,
+        errorDetails: true,
+        version: true,
+        hash: true,
+        env: true,
+        colors: true,
+        chunks: false,
+        chunkGroups: false,
+        children: false,
+        cached: true,
+        assets: true,
+      }
 }
