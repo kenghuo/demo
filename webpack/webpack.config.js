@@ -46,7 +46,7 @@ module.exports = {
         new Uglify()
     ],
     resolve: {
-        extensions: ['.js', '.json', 'jsx']       // 文件导入这些后缀可以不用写
+        extensions: ['.js', '.json', '.jsx', '.css']       // 文件导入这些后缀可以不用写
     },
     stats: {
         all: false,
