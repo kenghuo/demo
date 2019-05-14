@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Uglify = require('uglifyjs-webpack-plugin');
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
     entry: __dirname + '/app/main.js', //入口文件
@@ -35,9 +36,15 @@ module.exports = {
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({ // html引用自动插入
             filename: 'index.html',
-            template: 'app/index.html'
+            template: 'app/index.html',
+            minify: {       // 压缩HTML文件
+                removeAttributeQuotes: true,    // 移除属性的引号
+                removeComments: true,           // 删除注释 
+                collapseWhitespace: true        // 删除空格
+            }
         }),
         new webpack.BannerPlugin(`@author: 'kenghuo'\n@name: 'webpack 入门读物'`), // 版权
         new MiniCssExtractPlugin({      // css单独分离
@@ -45,9 +52,6 @@ module.exports = {
         }),
         new Uglify()
     ],
-    resolve: {
-        extensions: ['.js', '.json', '.jsx', '.css']       // 文件导入这些后缀可以不用写
-    },
     stats: {
         all: false,
         modules: false,
